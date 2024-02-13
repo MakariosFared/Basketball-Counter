@@ -5,7 +5,6 @@ class CounterCubit extends Cubit<CounterState> {
   CounterCubit() : super(CounterAIncrementState());
 
   int teamAPoint = 0;
-
   int teamBPoint = 0;
 
 
@@ -13,7 +12,7 @@ class CounterCubit extends Cubit<CounterState> {
     if (team == 'A') {
       teamAPoint += buttonNumber;
       emit(CounterAIncrementState());
-    } else {
+    } else if (team == 'B'){
       teamBPoint += buttonNumber;
       emit(CounterBIncrementState());
     }

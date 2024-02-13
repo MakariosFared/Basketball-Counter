@@ -153,7 +153,9 @@ class HomePage extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.orange,
                     minimumSize: const Size(150, 40)),
-                onPressed: () {},
+                onPressed: () {
+                  BlocProvider.of<CounterCubit>(context).teamReset() ;
+                },
                 child: const Text(
                   "Reset",
                   style: TextStyle(color: Colors.black, fontSize: 18),
